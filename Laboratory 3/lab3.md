@@ -10,4 +10,4 @@ Task 3: Creați o bază de date numită universitate cu proprietăți implicite.
 <img src="l3.png"/>
 <img src="l3.1.png"/>
 
-<input type="file" name="myFile">
+<input type="file" name="universitatea.bak">
