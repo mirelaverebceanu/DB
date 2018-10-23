@@ -1,5 +1,5 @@
 Task 1:
-<img src="lab4.1.png"/>
+<img src="lab4.1.PNG"/>
 
 Task 2:
 <img src="lab4.2.png"/>
