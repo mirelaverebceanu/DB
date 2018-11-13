@@ -44,6 +44,7 @@ TRANSFER dbo.studenti_reusita;
 
 7. Modificati 2-3 interogari asupra bazei de date universitatea prezentate in capitolul 4 astfel ca numele tabelelor accesate sa fie
 descrise in mod explicit, tinand cont de faptul ca tabelele au fost mutate in scheme noi.
+
 SELECT  DISTINCT discipline.Disciplina
         ,LEN(discipline.Disciplina) as length
 FROM plan_studii.discipline
@@ -56,6 +57,7 @@ From studenti.studenti, studenti.studenti_reusita, plan_studii.discipline
 where studenti.studenti.Id_Student=studenti.studenti_reusita.Id_Student
 and studenti_reusita.Id_Disciplina=discipline.Id_Disciplina
 and discipline.Nr_ore_plan_disciplina<60;
+
 8. Creati sinonimele respective pentru a simplifica interogarile construite in exercitiul precedent ~i reformulati interogarile, 
 folosind sinonimele create. 
 
