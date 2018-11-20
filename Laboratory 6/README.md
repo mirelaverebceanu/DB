@@ -50,4 +50,47 @@ Laboratory work nr. 6
 --8. Sa se scrie interogarile de creare a indecsilor asupra tabelelor din baza de date universitatea pentru a asigura o performanta sporita la executarea interogarilor 
 --SELECT din Lucrarea practica 4. Rezultatele optimizarii sa fie analizate in baza planurilor de executie, pana la si dupa crearea indecsilor. 
 --Indecsii nou-creati sa fie plasati fizic in grupul de fisiere userdatafgroupl (Crearea $i intrefinerea bazei de date - sectiunea 2.2.2)
-![ex8](https://github.com/mirelaverebceanu/DB/blob/master/Laboratory%206/Exercise%20screens/lab6.8.PNG)
+ALTER DATABASE universitatea
+ADD FILEGROUP userdatafgroupl
+GO
+
+ALTER DATABASE universitatea
+ADD FILE
+( NAME = Indexes,
+FILENAME = 'd:\db.ndf',
+SIZE = 1MB
+)
+TO FILEGROUP userdatafgroupl
+GO
+
+CHECKPOINT;
+GO
+DBCC DROPCLEANBUFFERS;
+DBCC FREESYSTEMCACHE('ALL');
+GO
+
+SET STATISTICS IO ON;
+SELECT distinct Nume_Student, Prenume_Student, avg(nota) media
+FROM studenti.studenti
+INNER JOIN studenti.studenti_reusita ON studenti.Id_Student=studenti_reusita.Id_Student
+where Id_Disciplina Not IN (
+SELECT  distinct ID_disciplina
+FROM studenti.studenti_reusita
+WHERE Id_Profesor IN
+(SELECT Id_Profesor
+FROM cadre_didactice.profesori
+where Adresa_Postala_Profesor  like '%31 August%')
+and Nota<5)
+group by Nume_Student, Prenume_Student;
+SET STATISTICS IO OFF;
+
+CREATE UNIQUE NONCLUSTERED INDEX ix_disciplina_UN_NN ON
+plan_studii.discipline (id_disciplina, disciplina)
+ON [userdatafgroupl]
+
+CREATE COLUMNSTORE INDEX ix_profesor_CS ON
+cadre_didactice.profesori (id_profesor, Adresa_Postala_Profesor)
+ON [userdatafgroupl]
+
+![ex8](https://github.com/mirelaverebceanu/DB/blob/master/Laboratory%206/Exercise%20screens/lab6.8.1.PNG)
+![ex8](https://github.com/mirelaverebceanu/DB/blob/master/Laboratory%206/Exercise%20screens/lab6.8.2.PNG)
