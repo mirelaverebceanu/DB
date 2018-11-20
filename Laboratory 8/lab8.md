@@ -10,6 +10,7 @@ Task 1:
  ![ex8.1.1](https://github.com/mirelaverebceanu/DB/blob/master/Laboratory%208/Screens/lab8.1.1.PNG)
  ![ex8.1.2](https://github.com/mirelaverebceanu/DB/blob/master/Laboratory%208/Screens/lab8.1.2.PNG)
  ![ex8.1.3](https://github.com/mirelaverebceanu/DB/blob/master/Laboratory%208/Screens/lab8.1.3.PNG)
+ ![ex8.1.4](https://github.com/mirelaverebceanu/DB/blob/master/Laboratory%208/Screens/lab8.1.4.PNG)
  
  Task 2:
  
