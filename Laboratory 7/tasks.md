@@ -32,6 +32,7 @@ Transferati tabelul profesori din schema dbo in schema cadre didactice, tinand c
 in acela~i mod ~ se trateze tabelele orarul, discipline care apartin schemei plan_studii ~i tabelele studenti, studenti_reusita, care
 apartin schemei studenti. Se scrie instructiunile SQL respective. 
 
+```SQL
 CREATE SCHEMA cadre_didactice ;
 
 CREATE SCHEMA plan_studii;
@@ -55,11 +56,11 @@ TRANSFER dbo.studenti;
 
 ALTER SCHEMA studenti
 TRANSFER dbo.studenti_reusita;
-
+```
 Task 7:
 Modificati 2-3 interogari asupra bazei de date universitatea prezentate in capitolul 4 astfel ca numele tabelelor accesate sa fie
 descrise in mod explicit, tinand cont de faptul ca tabelele au fost mutate in scheme noi.
-
+```SQL
 SELECT  DISTINCT discipline.Disciplina
         ,LEN(discipline.Disciplina) as length
 FROM plan_studii.discipline
@@ -72,11 +73,11 @@ From studenti.studenti, studenti.studenti_reusita, plan_studii.discipline
 where studenti.studenti.Id_Student=studenti.studenti_reusita.Id_Student
 and studenti_reusita.Id_Disciplina=discipline.Id_Disciplina
 and discipline.Nr_ore_plan_disciplina<60;
-
+```
 Task 8:
 Creati sinonimele respective pentru a simplifica interogarile construite in exercitiul precedent ~i reformulati interogarile, 
 folosind sinonimele create. 
-
+```SQL
 CREATE SYNONYM  ore FOR universitatea.plan_studii.discipline;
 
 SELECT * from ore;
@@ -99,3 +100,4 @@ From st, reusita, ore
 where st.Id_Student=reusita.Id_Student
 and reusita.Id_Disciplina=ore.Id_Disciplina
 and ore.Nr_ore_plan_disciplina<60;
+```
