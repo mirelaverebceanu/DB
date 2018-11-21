@@ -2,6 +2,8 @@ Task 1:
 Creati o diagrama a bazei de date, folosind fonna de vizualizare standard, structura careia este descrisa la inceputul 
 sarcinilor practice din capitolul 4.
 ![ex1](https://github.com/mirelaverebceanu/DB/blob/master/Laboratory%207/Exercise%20screens/lab7.1.PNG)
+
+vizualizare standard:
 ![ex1.1](https://github.com/mirelaverebceanu/DB/blob/master/Laboratory%207/Exercise%20screens/lab.7.PNG)
 
 Task 2:
