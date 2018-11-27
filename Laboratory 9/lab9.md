@@ -19,6 +19,11 @@ Task 2: Sa se creeze o procedura stocata, care nu are niciun parametru de intrar
            Parametri de intrare: numele si prenumele profesorului vechi, numele si prenumele profesorului nou, disciplina. in cazul in                care datele inserate sunt incorecte sau incomplete, sa se afiseze un mesaj de avertizare.
  ![](https://github.com/mirelaverebceanu/DB/blob/master/Laboratory%209/Screens/ex4_lab9.PNG)
  
+ Task 5:   Sa se creeze o procedura stocata care ar forma o lista cu primii 3 cei mai buni studenti la o disciplina, 
+           si acestor studenti sa le fie marita nota la examenul
+   	   final cu un punct (nota maximala posibila este 10). in calitate de parametru de intrare, va servi denumirea disciplinei.
+	   Procedura sa returneze urmatoarele campuri: Cod_ Grupa, Nume_Prenume_Student, Disciplina, Nota _ Veche, Nota _ Noua 
+ 
  Task 6:   Sa se creeze functii definite de utilizator in baza exercitiilor (2 exercitii) din capitolul 4.
            Parametrii de intrare trebuie sa corespunda criteriilor din clauzele WHERE ale exercitiilor respective.
  ![](https://github.com/mirelaverebceanu/DB/blob/master/Laboratory%209/Screens/ex6_1lab9.PNG)
