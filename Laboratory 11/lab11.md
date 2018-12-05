@@ -21,3 +21,5 @@ Fisierul copiei de rezerva sa se numeasca exercitiul3.bak
 Task 4.
 Sa se execute restaurarea consecutiva a tuturor copiilor de rezerva create. Recuperarea trebuie sa fie realizata intr-o baza de date noua universitatea_lab11.
 Fisierele bazei de date noise afla in dosarul BD_lab11. Sa se scrie instructiunile SQL respective 
+
+![](https://github.com/mirelaverebceanu/DB/blob/master/Laboratory%2011/Screens/ex4_lab11.PNG)
