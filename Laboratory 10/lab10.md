@@ -29,6 +29,7 @@ Sa se creeze un declansator DDL care ar interzice modificarea schemei bazei de d
 Task 6.
 Sa se creeze un declansator DDL care, la modificarea proprietatilor coloanei Id_Profesor dintr-un tabel, ar face schimbari asemanatoare in mod automat in restul tabelelor.
 
-![](https://github.com/mirelaverebceanu/DB/blob/master/Laboratory%2010/Screens/ex6_lab10.PNG)
 ![](https://github.com/mirelaverebceanu/DB/blob/master/Laboratory%2010/Screens/lab10_ex6.PNG)
+![](https://github.com/mirelaverebceanu/DB/blob/master/Laboratory%2010/Screens/ex6_1_lab10.PNG)
+
 
